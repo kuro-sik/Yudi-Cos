@@ -1,0 +1,202 @@
+.text{
+  text-align: center;
+}
+.text2{
+  text-align: center;
+  color: rgb(115, 0, 168);
+}
+.card{
+  width: 225px;
+  min-height: 350px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  transition: 0.2s;
+  position: relative;
+
+}
+
+.card:hover{
+  box-shadow: 4px 8px 16px #EDDEFF;
+}
+
+.card_top{
+  flex: 0 0 220px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card_image{
+  display:block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card_image > img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: 0.2s;
+}
+
+.card_label{
+  padding: 4px 8px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: #ff3b3b;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+}
+
+.card_bottom{
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  padding: 10px;
+}
+
+.card_prices{
+  display:flex;
+  margin-bottom: 5px;
+  flex: 0 0 50%;
+}
+
+.card_price::after{
+  content: "₽";
+  margin-left: 4px;
+  position: relative;
+}
+
+.card_price_discount{
+  font-weight: 700;
+  font-size: 19px;
+  color: #414141;
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+
+.card_price_discount::before{
+  content: "Со скидкой";
+  font-weight: 400;
+  font-size: 13px;
+  color: #bfbfbf;
+}
+
+.card_price_common{
+  font-weight: 400;
+  font-size: 17px;
+  color: #606060;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: flex-end;
+}
+
+.card_price_common::before{
+  content: "Обычная";
+  font-weight: 400;
+  font-size: 13px;
+  color: #bfbfbf;
+}
+
+.card_price_without{
+  font-weight: 400;
+  font-size: 17px;
+  color: #606060;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  align-items: center;
+  margin: 0;
+}
+
+.card_title{
+  display: block;
+  margin-bottom: 0px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 150%;
+  color: #414141;
+  text-align: center;
+}
+
+.card_title:hover{
+  color: #ad33ff;
+}
+
+.card_add{
+  display: block;
+  width: 100%;
+  font-weight: 400;
+  font-size: 17px;
+  color: #8b33ff;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #8b33ff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-top: auto;
+}
+
+.card_add:hover{
+  border: 1px solid #8b33ff;
+  background-color: #8b33ff;
+  color: #fff;
+}
+
+.cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 225px);
+  width: 100%;
+  max-width: 1000px;
+  justify-content: center;
+  justify-items: center;
+  column-gap: 30px;
+  row-gap: 40px;
+  margin: 0 auto;
+}
+.card_title_index{
+  display: block;
+  margin-bottom: 0px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 150%;
+  color: #414141;
+  text-align: center;
+}
+.container {
+  position: relative;
+  width: 100%;
+}
+
+/* Make the image responsive */
+.container img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Style the button and place it in the middle of the container/image */
+.container .btn {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #9700c5;
+  color: white;
+  font-size: 26px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.container .btn:hover {
+  background-color: black;
+}
